@@ -4,6 +4,20 @@
     display: inline-block;
     font-size: 14px;
     padding: 20px;
-    vertical-align: top;
-    
+    vertical-align: top;    
+}
+
+.logo{
+    width: 23%;
+    padding:1%;
+}
+
+nav{
+    width: 73%;
+    padding: 1%;
+}
+
+nav ul{
+    width: 50%;
+    margin-left: auto;
 }
