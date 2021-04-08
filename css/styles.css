@@ -4,6 +4,11 @@ body{
     margin: 0;
 }
 
+.content{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .main { 
     max-width: 1240px; 
     margin: 0 auto; 
@@ -24,6 +29,8 @@ body{
     padding: 20px;
     align-self: flex-start;
     flex: 5;
+    margin-top: 15px;
+   padding-bottom: 0;
 }
 
 .navigation .item{
@@ -34,7 +41,46 @@ body{
     height: 395px;
     width: auto;
     padding: 10%;
-    background-color: darkgray;
+}
+
+.heroGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "heroLeft heroText"
+    ;
+}
+
+.heroLeft{
+    grid-area: heroLeft;
+}
+
+.heroText{
+    grid-area: heroText;
+    color: #fbcccc;
+}
+
+.heroText h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 107.9%;
+}
+
+.heroText p{
+    font-style: normal;
+    font-weight: 250;
+    font-size: 45px;
+    line-height: 107.9%;
+}
+
+.backgrounds.herocolor{
+    background-image: url(https://images.unsplash.com/photo-1477093782505-e10aaeb27c6d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .aboutMe{
@@ -44,6 +90,10 @@ body{
     "leftContent leftContent leftContent rightContnet rightContent"
     ;
     padding: 5%;
+    background-color: #36113f;
+}
+
+.backgrounds.about{
     background-color: #36113f;
 }
 
@@ -61,42 +111,51 @@ body{
 
 .aboutMe h1{
     color: white;
+    margin: 0;
 }
 
 .aboutMe p{
-    color: white
+    color: white;
+}
+.aboutMeMain.leftContent p{
+    margin-bottom: 3%;
 }
 
 .getInTouch{
     display: grid;
-    grid-template-columns: 2fr 2fr ;
+    grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 3fr;
     grid-template-areas: 
     "touchTop touchTop"
-    "getInTouchLeft getInTouchRight"
+    "inTouchLeft inTouchRight"
     ;
-    padding: 10%;
-    margin-left: 5%;
-    margin-right: 5%
+    padding: 5%;
 }
 
 .touchTop{
     grid-area: touchTop;
 }
 
-.getInTouchLeft{
-    grid-area: getInTouchLeft;
+.inTouchLeft{
+    grid-area: inTouchLeft;
 }
 
-.getInTouchRight{
-    grid-area: getInTouchRight;
+.inTouchRight{
+    grid-area:inTouchRight;
 }
 
 .buttonLayout{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     padding:0px; 
+    max-width: 300px;
+}
+
+.inTouchLeft p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 107.9%;
+    width: 295px;
 }
 
 .button2{
@@ -171,4 +230,20 @@ h3{
     font-weight: bold;
     font-size: 23px;
     line-height: 107.9%;
+}
+
+h6{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 107.9%;
+}
+
+.aboutMeSecondary.rightContent h6{
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+.aboutMeSecondary.rightContent p{
+    margin-top: 10px;
+    margin-bottom:10px;
 }
